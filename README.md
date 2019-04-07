@@ -8,7 +8,7 @@ Custom Loader provides the end user to add various set of customizable loaders t
 Add this line to your application's Gemfile:
 
 
-gem 'custom_loader'
+	gem 'custom_loader'
 
 
 And then execute:
@@ -23,11 +23,11 @@ Or install it yourself as:
 
 I would suggest including the below line in application.html layout but you can include in any parent image that is being rendered first in your situation
 
-<%= CustomLoader.setup_custom_loader_images.html_safe%>
+	<%= CustomLoader.setup_custom_loader_images.html_safe%>
 
 This command will include all loader images on viewport . If you will not include this then all loaders images will take time to render on first load. Now add the below line where ever you want to add the loader:
 
-CustomLoader.custom_loader('main-timeline','blue_diameter','Edit Profile','gold').html_safe
+	CustomLoader.custom_loader('main-timeline','blue_diameter','Edit Profile','gold').html_safe
 
 The custom_loader method is in below format:
 parameter 1: provide the HTML elements(div,span,etc) ID where the loader needs to be appended.
