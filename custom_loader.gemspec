@@ -6,12 +6,12 @@ require "custom_loader/version"
 Gem::Specification.new do |spec|
   spec.name          = "custom_loader"
   spec.version       = CustomLoader::VERSION
-  spec.authors       = ["TODO: Write your name"]
-  spec.email         = ["TODO: Write your email address"]
+  spec.authors       = ["Dhruv Raj"]
+  spec.email         = ["rajdhruv30@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Custom Loaders for Page Loadings}
+  spec.description   = %q{A library of different set of customizable loaders to be included in your views for displaying a loading cycle between the request from client and response from server.}
+  spec.homepage      = "https://github.com/RajDhruv/custom_loader"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
