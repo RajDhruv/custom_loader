@@ -30,10 +30,10 @@ This command will include all loader images on viewport . If you will not includ
 	CustomLoader.custom_loader('main-timeline','blue_diameter','Edit Profile','gold').html_safe
 
 The custom_loader method is in below format:
-parameter 1: provide the HTML elements(div,span,etc) ID where the loader needs to be appended.
-parameter 2: specify the loader type to be rendered from the following sets of loaders: stream, circle, blob, blue_diameter, bouncing_balls, dna, gears1, gears2, pie_loader_cyan, snake_game, sand_clock_up, sliding_discs_up, sand_clock, sliding_discs. 
-parameter 3: Enter the text to be displayed with the loader, if nil then Loading will be displayed as default.
-parameter 4: Enter the text color to be displayed with the loader, if nil then black text will be displayed as default. If you want to customize the color but not the Default text then pass parameter 3 as nil .
+	parameter 1: provide the HTML elements(div,span,etc) ID where the loader needs to be appended.
+	parameter 2: specify the loader type to be rendered from the following sets of loaders: stream, circle, blob, blue_diameter, bouncing_balls, dna, gears1, gears2, pie_loader_cyan, snake_game, sand_clock_up, sliding_discs_up, sand_clock, sliding_discs. 
+	parameter 3: Enter the text to be displayed with the loader, if nil then Loading will be displayed as default.
+	parameter 4: Enter the text color to be displayed with the loader, if nil then black text will be displayed as default. If you want to customize the color but not the Default text then pass parameter 3 as nil .
 
 
 ## Development
