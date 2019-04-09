@@ -25,20 +25,33 @@ I would suggest including the below line in application.html layout but you can 
 
 	<%= CustomLoader.setup_custom_loader_images.html_safe%>
 
-This command will include all loader images on viewport . If you will not include this then all loaders images will take time to render on first load. Now add the below line where ever you want to add the loader:
+Now if you are planning to include your own custom images which are not existing in your rails asset path and you are having some open source URLs of your images then pass those URLs in an array with the named parameter as mentioned below:
 
-	CustomLoader.custom_loader('main-timeline','blue_diameter','Edit Profile','gold').html_safe
+	<%= CustomLoader.setup_custom_loader_images(my_img_urls: ["URL1","URL2",....,"URLn"]).html_safe%>
 
-The custom_loader method is in below format:
+This command will include all loader images on viewport . If you will not include this then all loaders images that are not existing in your assets folder will take time to render on first load. Now add the below line where ever you want to add the loader:
 
-	parameter 1: provide the HTML elements(div,span,etc) ID where the loader needs to be appended.
+	CustomLoader.custom_loader(NAMED PARAMETERS).html_safe
 
-	parameter 2: specify the loader type to be rendered from the following sets of loaders: stream, circle, blob, blue_diameter, bouncing_balls, dna, gears1, gears2, pie_loader_cyan, snake_game, sand_clock_up, sliding_discs_up, sand_clock, sliding_discs.
+The custom_loader method Named Parameters are described below:
 
-	parameter 3: Enter the text to be displayed with the loader, if nil then Loading will be displayed as default.
+	element_reference_name: Provide the HTML elements(div,span,etc) identifier where the loader needs to be appended, for example it can be an elements ID, Class or you can specify the HTML tags like: body, span, label, etc...
+
+	reference_type: Here specify that what kind of identifier is your previous parameter(element_reference_name) , for example :- "id","class", for other cases you need not initialize this parameter.
+
+	image_url: If you wish to use your own custom image, you can pass its URL here. You can use asset_path to provide assets image URL or can pass a open source web URL directly.
+
+	loader_type: If you wish to use some custom loader images provided by us you can simply leave image_url parameter and specify the loader type to be rendered from the following sets of loaders: stream, circle, blob, blue_diameter, bouncing_balls, dna, gears1, gears2, pie_loader_cyan, snake_game, sand_clock, sliding_discs.
+
+	content_position: Specify the position of text with respect to image in loader. It can be: "up", "down", "left", "right", "middle"
+
+	content: Enter the text to be displayed with the loader, if nil then Loading will be displayed as default.
 	
-	parameter 4: Enter the text color to be displayed with the loader, if nil then black text will be displayed as default. If you want to customize the color but not the Default text then pass parameter 3 as nil .
+	text_color: Enter the text color to be displayed with the loader, if nil then black text will be displayed as default. If you want to customize the color but not the Default text then pass parameter 3 as nil .
 
+Suppose you need to provide a loader in a div with id: "test_div" and want a stream Loader with text in golden color, so you can define loader as below example:
+	
+	CustomLoader.custom_loader(element_reference_name: "test_div", reference_type: "id", loader_type: "stream", text_color: "gold").html_safe
 
 ## Development
 
