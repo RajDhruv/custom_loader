@@ -47,7 +47,7 @@ The custom_loader method Named Parameters are described below:
 
 	content: Enter the text to be displayed with the loader, if nil then Loading will be displayed as default.
 	
-	text_color: Enter the text color to be displayed with the loader, if nil then black text will be displayed as default. If you want to customize the color but not the Default text then pass parameter 3 as nil .
+	text_color: Enter the text color to be displayed with the loader, if nil then black text will be displayed as default.
 
 Suppose you need to provide a loader in a div with id: "test_div" and want a stream Loader with text in golden color, so you can define loader as below example:
 	
